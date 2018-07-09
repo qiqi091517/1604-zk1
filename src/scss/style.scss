@@ -1,0 +1,158 @@
+@import "_minix.scss";
+@import "common.scss";
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.warp {
+    width: 100%;
+    height: auto;
+    @include box_flex;
+    @include direction(column);
+}
+
+header {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #000;
+    padding: 5px 0;
+    ol {
+        @include box_flex;
+        @include justify(space-between);
+        @include align;
+        font-size: pxTorem(20px);
+        li {
+            list-style: none;
+        }
+        li:last-child {
+            font-size: pxTorem(10px);
+            @include box_flex;
+            dl {
+                margin-right: 20px;
+            }
+            dl:last-child {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+section {
+    flex: 1;
+    // width: 100%;
+    // height: auto;
+    .top {
+        width: 100%;
+        height: auto;
+        @include box_flex;
+        @include justify(space-around);
+        border-bottom: 1px solid #999;
+        padding: 5px 0;
+        dl {
+            width: 23%;
+            background: #ccc;
+            dt {
+                text-align: center;
+                i {
+                    width: 100px;
+                    height: 100px;
+                    color: red;
+                }
+            }
+            dd {
+                p {
+                    font-size: pxTorem(15px);
+                    line-height: 20px;
+                }
+                p:last-child {
+                    font-size: pxTorem(10px);
+                }
+                text-align: center;
+            }
+        }
+    }
+    .cont {
+        border-top: 5px solid #686868;
+        ul {
+            li {
+                @include box_flex;
+                @include justify(space-around);
+                dl {
+                    width: 23%;
+                    border: 1px solid #ccc;
+                    dt {
+                        text-align: center;
+                        i {
+                            width: 100px;
+                            height: 100px;
+                        }
+                    }
+                    dd {
+                        p {
+                            font-size: pxTorem(15px);
+                            line-height: 20px;
+                        }
+                        p:last-child {
+                            font-size: pxTorem(10px);
+                        }
+                        text-align: center;
+                    }
+                }
+            }
+            .list {
+                .content {
+                    width: 48%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .box {
+        @include box_flex;
+        @include justify(space-around);
+        background: #ccc;
+        padding: 5px 0;
+        img {
+            width: 98%;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include box_flex;
+    @include justify(space-around);
+    dl {
+        margin-top: -10px;
+        // border: 1px solid #ccc;
+        dt {
+            text-align: center;
+            i {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        dd {
+            p {
+                font-size: pxTorem(10px);
+                line-height: 15px;
+            }
+            text-align: center;
+        }
+    }
+}
